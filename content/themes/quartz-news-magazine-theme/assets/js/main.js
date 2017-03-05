@@ -18,12 +18,12 @@
         if( $(window).width() >= 500 ){
             //only trim on larger screens
             $('.home-template .post-title a').ellipsis({
-                lines: 2,           
+                lines: 2,
                 ellipClass: 'ellip',
-                responsive: true    
+                responsive: true
             });
         }
-        
+
         $('.widget .title, .featured-posts li:nth-child(1n+2) .title').succinct({
             size: 70 //in characters
         });
@@ -57,7 +57,7 @@
         }
 
         /* Featured Posts Slider */
-    
+
         if( $('body').hasClass('home-template') && $('.slider').length ){
             //get num of sliders
             var numItems = $('.slider > .gallery-cell').length;
@@ -65,10 +65,10 @@
 
             //show slider
             var slider = $('.slider').removeClass('is-hidden');
-            
+
             // trigger redraw for transition
             slider[0].offsetHeight;
-            
+
             //use different settings depending on num of items
             if(numItems <= 2){
 
@@ -85,20 +85,20 @@
                 //init slider
                 slider.flickity({
                     cellAlign: 'center',
-                    contain: true, 
-                    wrapAround: slider_wrap_around, 
-                    autoPlay: slider_auto_play_speed, 
+                    contain: true,
+                    wrapAround: slider_wrap_around,
+                    autoPlay: slider_auto_play_speed,
                     pageDots: slider_page_dots,
                     draggable: slider_draggable,
                     prevNextButtons: slider_nav
                 });
-                
+
                 //full width
                 $('.slider-image, .gallery-cell').css('max-width','100%');
-                
+
                 //add wrapper
                 $('.slider-image .info').css('padding', '0').wrap('<div class="wrapper">');
-                
+
                 //resize gallery
                 slider.flickity('resize');
             }else{
@@ -106,9 +106,9 @@
                 //init slider
                 slider.flickity({
                     cellAlign: 'left',
-                    contain: true, 
-                    wrapAround: slider_wrap_around, 
-                    autoPlay: slider_auto_play_speed, 
+                    contain: true,
+                    wrapAround: slider_wrap_around,
+                    autoPlay: slider_auto_play_speed,
                     pageDots: true,
                     draggable: slider_draggable,
                     prevNextButtons: slider_nav
@@ -121,7 +121,7 @@
         function fitVidInit(){
             $(".post").fitVids();
         }
-        
+
         fitVidInit();
 
         /* Disqus Comments */
@@ -129,7 +129,8 @@
             $('.show-comments').on('click', function(){
               var disqus_shortname = disqus;
               var disqus_identifier = '{{post.id}}'; //avoid any issues caused by post URLs changing
-            
+              $('.facebook-comments').show();
+
               //ajax request to load the disqus javascript
               $.ajax({
                       type: "GET",
@@ -138,12 +139,12 @@
                       cache: true
               });
               //hide the button once comments load
-              $(this).fadeOut();
+              $(this).hide();
             });
         }else{
             $('.comments').css('display', 'none');
         }
-        
+
         /* Image lightbox */
 
         if(lightbox){
@@ -174,7 +175,7 @@
                     next:       ".older-posts"
                 });
 
-                ias.extension(new IASSpinnerExtension()); 
+                ias.extension(new IASSpinnerExtension());
                 ias.extension(new IASPagingExtension());
                 ias.extension(new IASHistoryExtension());
 
@@ -282,6 +283,13 @@
         if(rss_link == false){
             $(".social-media .rss").css("display", "none");
         }
+
+        // Custom
+
+        if ($('.show-social-if').hasClass('aligajani')) {
+          $('.show-social-if').show();
+        }
+
 
     });
 

@@ -1,0 +1,84 @@
+// Custom Styling
+// ====================================================================
+
+@import 'variables';
+
+$author-social-map: (
+  facebook : $color-facebook,
+  twitter: $color-twitter,
+  github: $color-github,
+  linkedin: $color-linkedin
+);
+
+.author-social {
+  display:flex;
+  margin:7px 7px;
+  a {
+    width:2.5em;
+    @each $socialName, $socialColor in $author-social-map {
+      .fa-#{$socialName} {
+        font-size:1.2em;
+        color: $socialColor;
+        &:hover {
+          color: lighten($socialColor,40%);
+        }
+      }
+    }
+  }
+}
+
+.hidden {
+  display:none;
+}
+
+.post-tags {
+  a {
+    font-size: $post-tags-font-size;
+  }
+}
+
+.post-meta {
+  .author, .post-author {
+    a {
+      font-size: $post-meta-author-font-size;
+    }
+  }
+}
+
+.tag-cover {
+    opacity: 0.8;
+    margin-top:-60px;
+    margin-bottom:40px;
+    padding:5%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+.wrapper {
+      text-align: center;
+      font-family: 'Lora', serif;
+      color: #252525;
+
+      .tag-title {
+        font-size: 3em;
+        font-weight: normal;
+        margin: 0;
+      }
+      .tag-description {
+        font-size: 1.5em;
+        font-weight: normal;
+        margin: 0;
+      }
+  }
+}
+
+.facebook-comments {
+  p {
+    font-family: 'Lora', serif;
+    color: #252525;
+    font-size:1.5em;
+  }
+  .fb-comments {
+    margin-bottom:20px;
+  }
+}

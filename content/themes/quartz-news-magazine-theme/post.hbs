@@ -1,15 +1,15 @@
 {{!< default}}
 
 {{! This is a post template. It displays a single post that the user selected from the home page template. }}
-    
+
 
     {{! Everything inside the #post tags pulls data from the post }}
     {{#post}}
-                
+
     <div class="post post-header">
         <div class="wrapper">
-            {{#if tags}}<div class="post-tags">{{tags separator=" | "}}</div>{{/if}} 
-            
+            {{#if tags}}<div class="post-tags">{{tags separator=" | "}}</div>{{/if}}
+
             <h1 class="post-title">{{{title}}}</h1>
 
             <div class="post-meta">
@@ -46,6 +46,7 @@
 
                 <section class="comments">
                     <button class="show-comments">Show Comments</button>
+                    <div class="facebook-comments hidden"> {{> "custom/facebook-comments"}} </div>
                     <div id="disqus_thread"></div>
                 </section> <!-- .comments -->
 
@@ -69,7 +70,7 @@
                                 {{#if tags}}
                                     <div class="post-tags">{{tags separator=" | " limit="3"}}</div>
                                 {{/if}}
-                                <a href="{{url}}">           
+                                <a href="{{url}}">
                                     <h2 class="post-title">{{{title}}}</h2>
                                 </a>
                             </section> <!-- .post-info -->
@@ -79,6 +80,6 @@
             </div> <!-- .wrapper -->
         </section> <!-- .read-next -->
         {{/get}}
-        
+
     </article>
     {{/post}}

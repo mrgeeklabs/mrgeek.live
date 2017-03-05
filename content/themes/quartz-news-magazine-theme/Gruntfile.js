@@ -8,7 +8,7 @@ module.exports = function(grunt) {
         livereload: true,
       },
       css: {
-        files: ['assets/scss/*.scss'],
+        files: ['assets/scss/**/*.scss'],
         tasks: ['sass-task'],
       },
       js: {
@@ -24,8 +24,8 @@ module.exports = function(grunt) {
         dist: {
           src: [
                 'assets/js/vendor/modernizr.custom.js',
-                'assets/js/vendor/jquery.fluidbox.min.js', 
-                'assets/js/vendor/jquery.fitvids.min.js', 
+                'assets/js/vendor/jquery.fluidbox.min.js',
+                'assets/js/vendor/jquery.fitvids.min.js',
                 'assets/js/vendor/jquery.infinite.scroll.min.js',
                 'assets/js/vendor/flickity.pkgd.min.js',
                 'assets/js/vendor/pushy.js',
@@ -41,19 +41,19 @@ module.exports = function(grunt) {
           src: 'assets/js/main.min.js',
           dest: 'assets/js/main.min.js'
         }
-    }, 
-    sass: {                              
-      dist: {                          
+    },
+    sass: {
+      dist: {
         options: {
           style: 'compressed' //output style: nested, compact, compressed, expanded
         },
-        files: {                         
+        files: {
           'assets/css/screen.css': 'assets/scss/screen.scss' // 'destination': 'source'
         }
       }
     }
   });
-  
+
   // Load grunt plugins
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');

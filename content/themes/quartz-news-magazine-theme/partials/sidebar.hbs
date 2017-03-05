@@ -39,13 +39,24 @@
 
                 {{#if bio}}
                     <p class="author-text">{{bio}}</p>
-                    <div class="fb-follow" data-href="https://www.facebook.com/{{facebook}}" data-layout="box_count" data-size="small" data-show-faces="true"></div>
+                    <div class="author-social ">
+                      <a target="_blank" href="https://facebook.com/{{facebook}}"><i class="fa fa-facebook"></i></a>
+                      <a target="_blank" href="https://twitter.com/{{twitter}}"><i class="fa fa-twitter"></i></a>
+                      <a class="hidden show-social-if aligajani" target="_blank" href="https://www.linkedin.com/in/ali-gajani-79913617/"><i class="fa fa-linkedin"></i></a>
+                      <a class="hidden show-social-if aligajani" target="_blank" href="https://github.com/aligajani"><i class="fa fa-github"></i></a>
+                    </div>
+                    {{> "custom/facebook-follow"}}
                 {{/if}}
                 </div>
             </section>
             {{/if}}
         {{/author}}
     {{/is}}
+
+    <section class="recent-posts widget">
+        <h3>Like us on Facebook</h3>
+        {{> "custom/facebook-page"}}
+    </section>
 
     {{#get "posts" include="tags" limit="4" as |recents|}}
     <section class="recent-posts widget">

@@ -24,15 +24,16 @@ var slider_nav = true;
 
 /************ Social Media ************/
 
-var google_plus_link = "https://plus.google.com/";
-var dribbble_link = "";
-var instagram_link = "";
-var tumblr_link = "";
+var google_plus_link = "https://plus.google.com/110312712152831859204";
 var youtube_link = "";
-var vimeo_link = "";
-var pinterest_link = "";
-var flickr_link = "";
 var linkedin_link = "";
 var github_link = "";
+var pinterest_link = "";
+var instagram_link = "";
+
 var soundcloud_link = "";
-var rss_link = false;
+var flickr_link = "";
+var vimeo_link = "";
+var tumblr_link = "";
+var dribbble_link = "";
+var rss_link = true;

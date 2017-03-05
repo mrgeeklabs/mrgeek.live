@@ -1,13 +1,25 @@
 {{!< default}}
 
 {{! This is a tag page template. It displays posts from a paticular tag }}
+{{#tag}}
+<div class="page-header">
+    <div class="wrapper">
+        <div class="post-tags">Tag</div>
+        <h1 class="author-title">{{name}}</h1>
+        <div class="post-meta">
+            {{#if description}}<span class="author-location">description</span>{{/if}}
+        </div>
+    </div> <!-- .wrapper -->
+</div> <!-- .page-header -->
+{{/tag}}
 
-    <div class="wrapper clearfix">   
+
+    <div class="wrapper clearfix">
         <div class="posts clearfix">
             {{#foreach posts}}
             <div class="{{post_class}}">
                 <a href="{{url}}">
-                    <div class="featured-image {{^if image}}no-featured-image{{/if}}" {{#if image}} style="background-image:url({{image}})" {{/if}}></div> 
+                    <div class="featured-image {{^if image}}no-featured-image{{/if}}" {{#if image}} style="background-image:url({{image}})" {{/if}}></div>
                 </a>
                 <section class="post-info">
                     {{#if tags}}
@@ -21,14 +33,14 @@
                         <span class="post-author">By {{author}}</span>
                         <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}"> - {{date format="MMMM D, YYYY"}}</time>
                     </div>
-                </section> 
+                </section>
             </div>
             {{/foreach}}
         </div> <!-- .posts -->
-        
+
         {{> "sidebar" }}
-        
+
     </div> <!-- .wrapper -->
-    
+
     {{!! Pagination links }}
     {{pagination}}
