@@ -1,7 +1,7 @@
 @media screen and (max-width: 1250px){
 	/* archive, tag, author template */
-	.archive-template .post .featured-image, 
-	.tag-template .post .featured-image, 
+	.archive-template .post .featured-image,
+	.tag-template .post .featured-image,
 	.author-template .post .featured-image{
 		width: 260px;
 		height: 180px;
@@ -11,8 +11,8 @@
 		width: calc(100% - 290px);
 	}
 
-	.archive-template .post-title, 
-	.tag-template .post-title, 
+	.archive-template .post-title,
+	.tag-template .post-title,
 	.author-template .post-title{
 		font-size: 1.5em;
 	}
@@ -30,7 +30,7 @@
 	.home-template{
 		/* 2 col layout */
 		.post,
-		.post:nth-child(6), 
+		.post:nth-child(6),
 		.post:nth-child(7),
 		.post:first-child{
 			width: 48.7%;
@@ -158,8 +158,8 @@
 		padding-right: 0;
 	}
 
-	.archive-template .sidebar, 
-	.tag-template .sidebar, 
+	.archive-template .sidebar,
+	.tag-template .sidebar,
 	.author-template .sidebar{
 		width: 100%;
 		margin-top: 20px;
@@ -192,7 +192,7 @@
 	.home-template{
 		/* 1 col layout */
 		.post,
-		.post:nth-child(6), 
+		.post:nth-child(6),
 		.post:nth-child(7),
 		.post:first-child{
 			width: 100%;
@@ -230,8 +230,8 @@
 
 	/* sidebar */
 
-	.archive-template .sidebar, 
-	.tag-template .sidebar, 
+	.archive-template .sidebar,
+	.tag-template .sidebar,
 	.author-template .sidebar{
 		margin-top: 50px;
 	}
@@ -251,7 +251,7 @@
 		bottom: auto;
 	}
 
-	.widget .featured-image, 
+	.widget .featured-image,
 	.featured-posts .featured-image{
 		height: 75px;
 		padding-top: 0;
@@ -267,28 +267,28 @@
 
 	/* archive, tag, author template */
 
-	.archive-template .post .featured-image, 
-	.tag-template .post .featured-image, 
+	.archive-template .post .featured-image,
+	.tag-template .post .featured-image,
 	.author-template .post .featured-image{
 		width: 100%;
 		margin-right: 0;
 	}
 
-	.archive-template .post-info, 
-	.tag-template .post-info, 
+	.archive-template .post-info,
+	.tag-template .post-info,
 	.author-template .post-info{
 		width: 100%;
 		padding-top: 15px;
 	}
 
-	.archive-template .post .post-tags, 
-	.tag-template .post .post-tags, 
+	.archive-template .post .post-tags,
+	.tag-template .post .post-tags,
 	.author-template .post .post-tags{
 		margin: 10px 0 15px 0;
 	}
 
-	.archive-template .sidebar .widget, 
-	.tag-template .sidebar .widget, 
+	.archive-template .sidebar .widget,
+	.tag-template .sidebar .widget,
 	.author-template .sidebar .widget{
 		width: 100%;
 		padding-right: 0;
@@ -476,7 +476,7 @@
 
 @media screen and (max-width: 320px){
 	/* sidebar */
-	.widget .title, 
+	.widget .title,
 	.featured-posts .title{
 		font-size: 0.85em;
 	}
