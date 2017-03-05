@@ -4,7 +4,7 @@
         {{! Document Settings }}
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        {{> "custom/facebook-meta"}}
+        {{> "custom/facebook-meta" }}
 
         {{! Page Meta }}
         <title>{{meta_title}}</title>
@@ -21,6 +21,8 @@
 
         {{! Ghost outputs important style and meta data with this tag }}
         {{ghost_head}}
+
+        {{> "custom/google-analytics"}}
 
     </head>
     <body class="{{body_class}}">
