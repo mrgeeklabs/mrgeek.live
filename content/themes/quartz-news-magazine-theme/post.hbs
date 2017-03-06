@@ -44,6 +44,10 @@
             <section class="post-content">
                 {{content}}
 
+                <hr>
+                <p>Please leave your feedback below.</p>
+                {{> "custom/facebook-like"}}
+
                 <section class="comments">
                     <button class="show-comments">Show Comments</button>
                     <div class="facebook-comments hidden"> {{> "custom/facebook-comments"}} </div>
